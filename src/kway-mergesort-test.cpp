@@ -127,21 +127,21 @@ int test_KWayMergeSmall() {
   cout << "## Uncomment these when ready to test ##" << endl;
   cout << "########################################" << endl;
 
-  // double timeToSort = 0.0;
-  // double bestSortTime = 0.0;
-  // string bestSortName = "";
+   double timeToSort = 0.0;
+   double bestSortTime = 0.0;
+   string bestSortName = "";
 
-  // timeToSort = runMySort(HeapKMerge<int, 2>(8), {5, 2, 8, 4, 3, 7, 1, 6});
+   timeToSort = runMySort(HeapKMerge<int, 2>(8), {5, 2, 8, 4, 3, 7, 1, 6});  
 
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 1
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 1
 
-  // timeToSort = runMySort(HeapKMerge<int, 3>(20), {11, 5, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 1, 16, 14, 13, 6, 9});
+   timeToSort = runMySort(HeapKMerge<int, 3>(20), {11, 5, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 1, 16, 14, 13, 6, 9});
 
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 2
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 2
 
-  // timeToSort = runMySort(HeapKMerge<int, 4>(22), {11, 22, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 21, 16, 14, 13, 6, 9, 1, 5});
+   timeToSort = runMySort(HeapKMerge<int, 4>(22), {11, 22, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 21, 16, 14, 13, 6, 9, 1, 5});
 
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 3
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort, timeToSort, 0.0, 0.0); // 3
 
   return (testNum - 1 == correct);
 }
@@ -157,79 +157,79 @@ int test_KWayMerge() {
   cout << "## Uncomment these when ready to test ##" << endl;
   cout << "########################################" << endl;
 
-  // double timeToSort = 0.0;
-  // double bestSortTime = 0.0;
-  // string bestSortName = "";
+   double timeToSort = 0.0;
+   double bestSortTime = 0.0;
+   string bestSortName = "";
 
-  // double baselineMerge = runMySort(Merge<unsigned int>(2000000));
+   double baselineMerge = runMySort(Merge<unsigned int>(2000000));
 
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", baselineMerge, baselineMerge, 0.0, 0.0); // 1
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", baselineMerge, baselineMerge, 0.0, 0.0); // 1
 
-  // cout << "For information, this Merge Sort time will be the baseline: " << baselineMerge << " milliseconds" << endl << endl;
+   cout << "For information, this Merge Sort time will be the baseline: " << baselineMerge << " milliseconds" << endl << endl;
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 2>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 2-Way", baselineMerge, timeToSort, -0.75, 1); // 2
+   timeToSort = runMySort(HeapKMerge<unsigned int, 2>(2000000));
+   testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 2-Way", baselineMerge, timeToSort, -0.75, 1); // 2
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 3>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 3-Way", baselineMerge, timeToSort, -0.75, 0.2); // 3
+  timeToSort = runMySort(HeapKMerge<unsigned int, 3>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 3-Way", baselineMerge, timeToSort, -0.75, 0.2); // 3
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 4>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way", baselineMerge, timeToSort, -0.75, 0.2); // 4
+  timeToSort = runMySort(HeapKMerge<unsigned int, 4>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way", baselineMerge, timeToSort, -0.75, 0.2); // 4
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 5>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 5-Way", baselineMerge, timeToSort, -0.75, 0.1); // 5
+  timeToSort = runMySort(HeapKMerge<unsigned int, 5>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 5-Way", baselineMerge, timeToSort, -0.75, 0.1); // 5
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 6>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 6-Way", baselineMerge, timeToSort, -0.75, -0.02); // 6
+  timeToSort = runMySort(HeapKMerge<unsigned int, 6>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 6-Way", baselineMerge, timeToSort, -0.75, -0.02); // 6
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 7>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 7-Way", baselineMerge, timeToSort, -0.75, -0.05); // 7
+  timeToSort = runMySort(HeapKMerge<unsigned int, 7>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 7-Way", baselineMerge, timeToSort, -0.75, -0.05); // 7
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 8>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 8-Way", baselineMerge, timeToSort, -0.75, -0.05); // 8
+  timeToSort = runMySort(HeapKMerge<unsigned int, 8>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 8-Way", baselineMerge, timeToSort, -0.75, -0.05); // 8
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 9>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 9-Way", baselineMerge, timeToSort, -0.75, -0.05); // 9
+  timeToSort = runMySort(HeapKMerge<unsigned int, 9>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 9-Way", baselineMerge, timeToSort, -0.75, -0.05); // 9
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 10>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 10-Way", baselineMerge, timeToSort, -0.75, -0.02); // 10
+  timeToSort = runMySort(HeapKMerge<unsigned int, 10>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 10-Way", baselineMerge, timeToSort, -0.75, -0.02); // 10
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 11>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 11-Way", baselineMerge, timeToSort, -0.75, -0.02); // 11
+  timeToSort = runMySort(HeapKMerge<unsigned int, 11>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 11-Way", baselineMerge, timeToSort, -0.75, -0.02); // 11
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 12>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 12-Way", baselineMerge, timeToSort, -0.75, -0.02); // 12
+  timeToSort = runMySort(HeapKMerge<unsigned int, 12>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 12-Way", baselineMerge, timeToSort, -0.75, -0.02); // 12
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 13>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 13-Way", baselineMerge, timeToSort, -0.75, -0.02); // 13
+  timeToSort = runMySort(HeapKMerge<unsigned int, 13>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 13-Way", baselineMerge, timeToSort, -0.75, -0.02); // 13
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 14>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 14-Way", baselineMerge, timeToSort, -0.75, -0.02); // 14
+  timeToSort = runMySort(HeapKMerge<unsigned int, 14>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 14-Way", baselineMerge, timeToSort, -0.75, -0.02); // 14
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 15>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 15-Way", baselineMerge, timeToSort, -0.75, -0.02); // 15
+  timeToSort = runMySort(HeapKMerge<unsigned int, 15>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 15-Way", baselineMerge, timeToSort, -0.75, -0.02); // 15
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 31>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 31-Way", baselineMerge, timeToSort, -0.75, 1); // 16
+  timeToSort = runMySort(HeapKMerge<unsigned int, 31>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 31-Way", baselineMerge, timeToSort, -0.75, 1); // 16
 
-  // timeToSort = runMySort(HeapKMerge<unsigned int, 63>(2000000));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 63-Way", baselineMerge, timeToSort, -0.75, 1); // 17
+  timeToSort = runMySort(HeapKMerge<unsigned int, 63>(2000000));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 63-Way", baselineMerge, timeToSort, -0.75, 1); // 17
 
 
-  // cout << endl << "** Checking for speedup, one of these should have run significantly faster ** " << endl << endl;
+  cout << endl << "** Checking for speedup, one of these should have run significantly faster ** " << endl << endl;
 
-  // double percentSpeedup = 0.0;
+  double percentSpeedup = 0.0;
 
-  // if (baselineMerge != 0.0) {
-  //   percentSpeedup = (((bestSortTime - baselineMerge) / baselineMerge) * -1 * 100);
-  //   cout << "For information, the fastest sort was " << bestSortName << " at " << bestSortTime << " milliseconds," << endl;
-  //   cout << "which is a " << percentSpeedup << " % speedup over the Merge Sort" << endl << endl;
-  //   testSpeedup(testNum++, speedupCorrect, percentSpeedup, 20, 75); // 18
-  // }
+  if (baselineMerge != 0.0) {
+    percentSpeedup = (((bestSortTime - baselineMerge) / baselineMerge) * -1 * 100);
+    cout << "For information, the fastest sort was " << bestSortName << " at " << bestSortTime << " milliseconds," << endl;
+    cout << "which is a " << percentSpeedup << " % speedup over the Merge Sort" << endl << endl;
+    testSpeedup(testNum++, speedupCorrect, percentSpeedup, 20, 75); // 18
+  }
 
-  // cout << "##########################################################" << endl;
-  // cout << "## Note, some prior tests may fail on GitHub, that's ok ##" << endl;
-  // cout << "##########################################################" << endl;
+  cout << "##########################################################" << endl;
+  cout << "## Note, some prior tests may fail on GitHub, that's ok ##" << endl;
+  cout << "##########################################################" << endl;
 
   // Allow up to 4 failed tests becase GitHub's processors aren't consistent.
   return (testNum - 1 + 4 >= correct && correct > 0 && speedupCorrect == 1);
@@ -245,14 +245,14 @@ int test_KWayTemplates() {
   cout << "## Uncomment these when ready to test ##" << endl;
   cout << "########################################" << endl;
 
-  // double timeToSort = runMySort(HeapKMerge<double, 4>(20));
-  // double bestSortTime = 0.0;
-  // string bestSortName = "";
+  double timeToSort = runMySort(HeapKMerge<double, 4>(20));
+  double bestSortTime = 0.0;
+  string bestSortName = "";
 
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, doubles", timeToSort, timeToSort, 0, 0); // 1
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, doubles", timeToSort, timeToSort, 0, 0); // 1
 
-  // timeToSort = runMySort(HeapKMerge<string, 4>(20));
-  // testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, strings", timeToSort, timeToSort, 0, 0); // 2
+  timeToSort = runMySort(HeapKMerge<string, 4>(20));
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, strings", timeToSort, timeToSort, 0, 0); // 2
 
   return (testNum - 1 >= correct && correct > 0);
 }
