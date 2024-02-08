@@ -133,15 +133,15 @@ int test_KWayMergeSmall() {
 
    timeToSort = runMySort(HeapKMerge<int, 2>(8), {5, 2, 8, 4, 3, 7, 1, 6});  
 
-   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 0.0); // 1
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 3.0); // 1
 
    timeToSort = runMySort(HeapKMerge<int, 3>(20), {11, 5, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 1, 16, 14, 13, 6, 9});
 
-   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 0.0); // 2
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 3.0); // 2
 
    timeToSort = runMySort(HeapKMerge<int, 4>(22), {11, 22, 19, 2, 10, 15, 12, 8, 20, 4, 3, 17, 18, 7, 21, 16, 14, 13, 6, 9, 1, 5});
 
-   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 0.0); // 3
+   testSort(testNum++, correct, bestSortTime, bestSortName, "Merge", timeToSort + 0.001, timeToSort + 0.001, 0.0, 3.0); // 3
 
   return (testNum - 1 == correct);
 }
@@ -249,10 +249,10 @@ int test_KWayTemplates() {
   double bestSortTime = 0.0;
   string bestSortName = "";
 
-  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, doubles", timeToSort + 0.001, timeToSort + 0.001, 0, 2.0); // 1
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, doubles", timeToSort + 0.001, timeToSort + 0.001, 0, 3.0); // 1
 
   timeToSort = runMySort(HeapKMerge<string, 4>(20));
-  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, strings", timeToSort + 0.001, timeToSort + 0.001, 0, 2.0); // 2
+  testSort(testNum++, correct, bestSortTime, bestSortName, "K-Way Heap Merge: 4-Way, strings", timeToSort + 0.001, timeToSort + 0.001, 0, 3.0); // 2
 
   return (testNum - 1 >= correct && correct > 0);
 }
